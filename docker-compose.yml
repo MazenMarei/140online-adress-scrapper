@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  scraper:
+    build: .
+    container_name: 140online-scraper
+    restart: "no"
+    volumes:
+      - ./output:/app/output
+    environment:
+      - NODE_ENV=production
